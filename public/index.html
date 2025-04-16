@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>McCluckel's Sandwich Shop</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="./index.js" defer></script>
+  </head>
+  <body>
+    <h1>CS122 JavaScript Essentials</h1>
+    <h2>🐔 McCluckel's Inventory</h2>
+    <div id="message">[Refresh this viewer to load content.]</div>
+    <h3>May I take your order?</h3>
+    <form name="takeOrder" id="takeOrder">
+      <label for="custName">Customer Name:</label>
+      <input name="custName" id="custName" required /><br /><br />
+      <select name="regular" id="regular">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label for="regular">Regular Chicken Sandwich</label>
+      <br /><br />
+      <select name="deluxe" id="deluxe">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label for="deluxe">Deluxe Chicken Sandwich</label>
+      <br /><br />
+      <select name="spicy" id="spicy">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label for="spicy">Spicy Chicken Sandwich</label>
+      <br /><br />
+      <input type="submit" value="SUBMIT" />
+    </form>
+    <h4>Latest Order</h4>
+    <p id="currOrder" class="results">
+      <span class="awaiting">Order details will appear here.</span>
+    </p>
+    <h4>Current Inventory</h4>
+    <p id="currInventory" class="results">
+      <span class="awaiting">Inventory will appear here.</span>
+    </p>
+    <button onclick="restockAndDisplay()">RESTOCK</button>
+    <h4>History</h4>
+    <p id="orderHistory" class="results"></p>
+  </body>
+</html>

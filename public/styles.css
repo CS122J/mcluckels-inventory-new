@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+}
+code {
+  color: dodgerblue;
+  font-size: 120%;
+}
+
+h3 {
+  margin-top: 40px;
+}
+
+.results {
+  padding: 10px;
+  border: 1px solid dodgerblue;
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+}
+
+.awaiting {
+  color: grey;
+  font-style: italic;
+}
+
+.actionBtn {
+  float: right;
+}
+
+#message {
+  color: red;
+  background-color: yellow;
+}
