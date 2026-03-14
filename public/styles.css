@@ -1,9 +1,86 @@
 body {
   font-family: sans-serif;
 }
+
 code {
   color: dodgerblue;
   font-size: 120%;
+}
+
+/* Help text styling */
+.help-text {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Feedback message styles */
+.alert {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.alert-error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #e57373;
+}
+
+.alert-success {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #81c784;
+}
+
+.alert-info {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #64b5f6;
+}
+
+/* Form styling */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid dodgerblue;
+  border-color: dodgerblue;
+}
+
+button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+button:focus {
+  outline: 2px solid #333;
+  outline-offset: 2px;
 }
 
 h3 {

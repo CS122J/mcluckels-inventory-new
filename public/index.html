@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>McCluckel's Sandwich Shop</title>
@@ -12,37 +12,65 @@
     <div id="message">[Refresh this viewer to load content.]</div>
     <h3>May I take your order?</h3>
     <form name="takeOrder" id="takeOrder">
-      <label for="custName">Customer Name:</label>
-      <input name="custName" id="custName" required /><br /><br />
-      <select name="regular" id="regular">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <label for="regular">Regular Chicken Sandwich</label>
+      <label for="custName"
+        >Customer Name:
+        <input
+          name="custName"
+          id="custName"
+          required
+          aria-describedby="custName-help"
+          placeholder="Enter full name"
+        />
+      </label>
+      <div id="custName-help" class="help-text">
+        Please enter the customer's full name (at least 2 characters)
+      </div>
+      <br />
+      <label for="regular"
+        >Regular Chicken Sandwich:
+        <select name="regular" id="regular" aria-describedby="regular-help">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </label>
+      <div id="regular-help" class="help-text">
+        2 buns, 1 patty, 0.5 cup lettuce
+      </div>
       <br /><br />
-      <select name="deluxe" id="deluxe">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <label for="deluxe">Deluxe Chicken Sandwich</label>
+      <label for="deluxe"
+        >Deluxe Chicken Sandwich:
+        <select name="deluxe" id="deluxe" aria-describedby="deluxe-help">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </label>
+      <div id="deluxe-help" class="help-text">
+        3 buns, 2 patties, 1 cup lettuce, 3 oz pickle, 1 cup tomato
+      </div>
       <br /><br />
-      <select name="spicy" id="spicy">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <label for="spicy">Spicy Chicken Sandwich</label>
+      <label for="spicy"
+        >Spicy Chicken Sandwich:
+        <select name="spicy" id="spicy" aria-describedby="spicy-help">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </label>
+      <div id="spicy-help" class="help-text">
+        2 buns, 1 patty, 0.5 cup lettuce, 2 oz pickle, 2 slices pepperjack, 1
+        cup tomato
+      </div>
       <br /><br />
       <input type="submit" value="SUBMIT" />
     </form>
@@ -54,7 +82,12 @@
     <p id="currInventory" class="results">
       <span class="awaiting">Inventory will appear here.</span>
     </p>
-    <button onclick="restockAndDisplay()">RESTOCK</button>
+    <button id="restockBtn" type="button" aria-describedby="restock-help">
+      RESTOCK
+    </button>
+    <div id="restock-help" class="help-text">
+      Click to replenish all inventory to full levels
+    </div>
     <h4>History</h4>
     <p id="orderHistory" class="results"></p>
   </body>
